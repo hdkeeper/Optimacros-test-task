@@ -1,0 +1,18 @@
+{
+  "name": "@optimacros/test-client",
+  "version": "1.0.0",
+  "main": "client.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keeper",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}
