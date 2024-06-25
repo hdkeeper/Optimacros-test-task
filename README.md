@@ -52,3 +52,22 @@ cd server
 npm install -g jest
 npm test
 ```
+
+Запускаем клиент:
+```
+cd client
+npm install -g typescript ts-node
+npm install
+ts-node client.ts -u test -p test  <action> [arguments...]
+```
+
+## Справочник
+
+| API сервера                 | Действия и аргументы клиента | Описание
+| ----------------------------|------------------------------|-------------------------------------------------------------------
+| **POST** /auth              | `-u test -p test`            | Авторизация по имени (**-u**) и паролю (**-p**), обязательно
+| **GET** /cars?brand=*brand* | `list [brand]`               | Список автомобилей с необязательной фильтрацией по бренду (*brand*)
+| **GET** /cars/*id*          | `get <id>`                   | Выбрать автомобиль по *id*
+| **PUT** /cars               | `create "{jsonData}"`        | Добавить автомобиль, например:<br>`"{\"brand\":\"Toyota\",\"title\":\"Corolla\",\"year\":2020,\"price\":7000}"`
+| **POST** /cars/*id*         | `edit <id> "{jsonData}"`     | Изменить автомобиль по *id*, пример *jsonData*:<br>`"{\"price\":7000}"`
+| **DELETE** /cars/*id*       | `delete <id>`                | Удалить автомобиль по *id*
