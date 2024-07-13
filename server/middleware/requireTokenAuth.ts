@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { isValidToken} from '../lib/token';
+import { isValidToken } from '../lib/token';
 
 export default function (req: Request, res: Response, next: NextFunction) {
     const authHeader = req.header('Authorization');

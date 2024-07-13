@@ -1,5 +1,6 @@
 import minimist, { ParsedArgs } from 'minimist';
 import axios, { AxiosError } from 'axios';
+import '@types/node';
 
 
 const api = axios.create({
@@ -59,6 +60,5 @@ async function handleAction(args: ParsedArgs) {
         }
     }
 }
-
 
 handleAction(minimist(process.argv.slice(2)));
